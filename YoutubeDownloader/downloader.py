@@ -5,8 +5,8 @@ import re
 import requests
 
 
-def find_and_download(song):
-    if config.CLIENT_ID == None:
+def find_and_download(song, CLIENT_ID=None):
+    if config.CLIENT_ID == None and not CLIENT_ID:
         print 'Please set your CLIENT_ID in {0}'.format(
               '/'.join(os.path.realpath(__file__).split('/')[:-1]))
         exit(1)
@@ -18,7 +18,6 @@ def find_and_download(song):
     unfiltered_results = get_results(song)
     filtered_results = filter_results(song, unfiltered_results)
     vid_ids = order_results(song, filtered_results)
-
     if not vid_ids:
         song['title'] = re.sub('\(.+\)', '', song['title'])
         unfiltered_results = get_results(song)
