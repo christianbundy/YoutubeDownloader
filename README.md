@@ -24,7 +24,7 @@ pip install git+https://github.com/dean/YoutubeDownloader.git
 
 ## Usage
 
-The primary function to take advantage of is ```find_and_downloader(song)```.
+The primary function to take advantage of is ```YoutubeDownloader.downloader.find_and_download(song)```.
 
 The argument ```song``` must be a dictionary with both ```title``` and
 ```artist``` keys. From there it looks up songs relating to the query with
