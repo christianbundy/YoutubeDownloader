@@ -11,7 +11,7 @@ def find_and_download(song, CLIENT_ID=None):
         exit(1)
     if CLIENT_ID:
         config.CLIENT_ID = CLIENT_ID
-        config.params['key'] = CLIENT_ID
+        config.DEFAULT_PARAMS['key'] = CLIENT_ID
 
     if exists(song['title']):
         print "{0} already exists!".format(song['title'])
