@@ -9,6 +9,9 @@ def find_and_download(song, CLIENT_ID=None):
         print 'Please set your CLIENT_ID in {0}'.format(
               '/'.join(os.path.realpath(__file__).split('/')[:-1]))
         exit(1)
+    if CLIENT_ID:
+        config.CLIENT_ID = CLIENT_ID
+        config.params['key'] = CLIENT_ID
 
     if exists(song['title']):
         print "{0} already exists!".format(song['title'])
