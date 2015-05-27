@@ -1,1 +1,1 @@
-from youtubedl import YoutubeDownloader
+from YoutubeDownloader import downloader
