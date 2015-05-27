@@ -1,4 +1,4 @@
-import config
+from YoutubeDownloader import config
 import os
 
 import re
