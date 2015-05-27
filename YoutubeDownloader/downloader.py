@@ -1,9 +1,8 @@
-from YoutubeDownloader import config
 import os
-
 import re
 import requests
 
+import .config
 
 def find_and_download(song, CLIENT_ID=None):
     if config.CLIENT_ID == None and not CLIENT_ID:
