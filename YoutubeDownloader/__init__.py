@@ -1,1 +1,1 @@
-from YoutubeDownloader import downloader
+from YoutubeDownloader import downloader, config
