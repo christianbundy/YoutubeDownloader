@@ -186,9 +186,9 @@ def filter_results(song, results):
 
 
 def is_valid(song, result):
-    title = clean(song['title'].strip(' ').lower().decode('utf8')).replace(', ', ',')
-    artist = clean(song['artist'].strip(' ').lower().decode('utf8')).replace(', ', ',')
-    yt_title = clean(result['snippet']['title'].lower().decode('utf8')).replace(', ', ',')
+    title = clean(song['title'].strip(' ').lower()).replace(', ', ',').decode('utf8')
+    artist = clean(song['artist'].strip(' ').lower()).replace(', ', ',').decode('utf8')
+    yt_title = clean(result['snippet']['title'].lower()).replace(', ', ',').decode('utf8')
     query = '{0} {1}'.format(title, artist).decode('utf8')
 
     # Songs will likely never be less than 2:20 that I am searching for.
