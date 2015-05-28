@@ -189,7 +189,7 @@ def is_valid(song, result):
     title = clean(song['title'].strip(' ').lower().decode('utf8')).replace(', ', ',')
     artist = clean(song['artist'].strip(' ').lower().decode('utf8')).replace(', ', ',')
     yt_title = clean(result['snippet']['title'].lower().decode('utf8')).replace(', ', ',')
-    query = '{0} {1}'.format(title, artist)
+    query = '{0} {1}'.format(title, artist).decode('utf8')
 
     # Songs will likely never be less than 2:20 that I am searching for.
     duration = parse_duration(result['contentDetails']['duration'])
